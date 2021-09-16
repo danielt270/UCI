@@ -29,4 +29,4 @@
   - name: Enable service filebeat on boot
     systemd:
       name: filebeat
-      enabled: yes
+      enabled: yescontent
