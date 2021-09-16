@@ -1,0 +1,32 @@
+---                                                          
+- name: Installing and Launch Filebeat
+  hosts: webservers
+  become: yes
+  tasks:
+  - name: Download filebeat .rpm file
+    command: curl -L https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-oss-7.8.1-x86_64.rpm
+
+  - name: Install filebeat .rpm
+    command: sudo rpm -vi filebeat-oss-7.8.1-x64_64.rpm
+
+  - name: Install filebeat .deb
+    command: yum install java-1.8.0-*
+
+  - name: Drop in filebeat.yml
+    copy:
+      src: /etc/ansible/files/filebeat-config.yml
+      dest: /etc/filebeat/filebeat.yml
+
+  - name: Enable and Configure System Module
+    command: filebeat modules enable system
+
+  - name: Setup filebeat
+    command: filebeat setup
+
+  - name: Start filebeat service
+    command: service filebeat start
+
+  - name: Enable service filebeat on boot
+    systemd:
+      name: filebeat
+      enabled: yescontent
