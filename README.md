@@ -2,9 +2,9 @@
 
 The files in this repository were used to configure the network depicted below.
 
-![Cloud Diagram 2](C:\Users\dbt27\OneDrive\Desktop\Cyber\gitrepo\NetworkDiagrams\Cloud Diagram 2.png)
+![Cloud Diagram 2](NetworkDiagrams/Cloud Diagram 2.png)
 
-These files have been tested and used to generate a live ELK deployment on AWS. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as [Filebeat](AnsiblePlaybooks\filebeat-playbook.yml)
+These files have been tested and used to generate a live ELK deployment on AWS. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as [Filebeat](AnsiblePlaybooks/filebeat-playbook.yml)
 
 This document contains the following details:
 - Description of the Topology
@@ -24,8 +24,8 @@ Load balancing ensures that the application will be highly available, in additio
 - Jump boxes are useful as they require for the admins to connect remotely on a secure computer to access and manage devices in a separate security zone
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the log files and system resources.
-- [Filebeat](AnsiblePlaybooks\filebeat-playbook.yml) primarily watches system logs and forwards any changes to the Elasticsearch Host
-- [Metricbeat](AnsiblePlaybooks\metricbeat-playbook) collects the metrics and system resources usage to display in Elasticsearch
+- [Filebeat](AnsiblePlaybooks/filebeat-playbook.yml) primarily watches system logs and forwards any changes to the Elasticsearch Host
+- [Metricbeat](AnsiblePlaybooks/metricbeat-playbook) collects the metrics and system resources usage to display in Elasticsearch
 
 The configuration details of each machine may be found below.
 
@@ -57,7 +57,7 @@ A summary of the access policies in place can be found in the table below.
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous as this allows for reuse as well as automation of installations and updates, making daily tasks more efficient.
 
-The [playbook](AnsiblePlaybooks\install-elk.yml) implements the following tasks:
+The [playbook](AnsiblePlaybooks/install-elk.yml) implements the following tasks:
 
 - Installs docker.io
 - Increases virtual memory
@@ -67,7 +67,7 @@ The [playbook](AnsiblePlaybooks\install-elk.yml) implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![elk-docker](D:\Users\dbt27\Downloads\elk-docker.png)
+![elk-docker](elk-docker.png)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
@@ -75,8 +75,8 @@ This ELK server is configured to monitor the following machines:
 - Webserver 2: 172.31.17.12
 
 We have installed the following Beats on these machines:
-- [Metricbeat](AnsiblePlaybooks\metricbeat-playbook)
-- [Filebeat](AnsiblePlaybooks\filebeat-playbook.yml)
+- [Metricbeat](AnsiblePlaybooks/metricbeat-playbook)
+- [Filebeat](AnsiblePlaybooks/filebeat-playbook.yml)
 
 These Beats allow us to collect the following information from each machine:
 - _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
