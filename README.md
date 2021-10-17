@@ -2,9 +2,9 @@
 
 The files in this repository were used to configure the network depicted below.
 
-![Cloud Diagram 2](NetworkDiagrams/Cloud Diagram 2.png)
+![Cloud Diagram 2](NetworkDiagrams/"Cloud Diagram 2.png")
 
-These files have been tested and used to generate a live ELK deployment on AWS. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as [Filebeat](AnsiblePlaybooks/filebeat-playbook.yml)
+These files have been tested and used to generate a live ELK deployment on AWS. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the [filebeat-playbook.yml](AnsiblePlaybooks/filebeat-playbook.yml) file may be used to install only certain pieces of it, such as Filebeat
 
 This document contains the following details:
 - Description of the Topology
