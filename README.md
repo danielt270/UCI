@@ -85,13 +85,13 @@ These Beats allow us to collect the following information from each machine:
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the _____ file to _____.
-- Update the _____ file to include...
-- Run the playbook, and navigate to ____ to check that the installation worked as expected.
+- Copy the configuration file to your web VMs.
+- Update the hosts file to include the IP addresses of the webservers and ELK VM
+- Run the playbook, and navigate to http://[elk_server_ip]:5601/app/kibana to check that the installation worked as expected.
 
-_TODO: Answer the following questions to fill in the blanks:_
-- _Which file is the playbook? Where do you copy it?_
-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
-- _Which URL do you navigate to in order to check that the ELK server is running?
+- Playbook location: /etc/ansible/filebeat-playbook.yml
+- Copied Location: /etc/filbeat/filebeat-config.yml
+- Updating the hosts file will tell what machines Ansible should run the playbooks on
+- Updating the filebeat/elk playbook's hosts will tell Ansible what group of machines to run the playbooks on
+- Elk Server URL: http://[elk_server_ip]:5601/app/kibana
 
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
