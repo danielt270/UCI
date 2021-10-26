@@ -79,7 +79,10 @@ We have installed the following Beats on these machines:
 - [Filebeat](AnsiblePlaybooks/filebeat-playbook.yml)
 
 These Beats allow us to collect the following information from each machine:
-- _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
+
+- Filebeat is a lightweight solution to forwarding logs to a centralized server such as the Elasticsearch Host. Includes modules for visualization through Kibana and the ability of parsing logs into discrete sections for further readability
+- Metricbeat is a lightweight shipper that collects metrics and relevant statistics about the particular system and sends them to the Elasticsearch Host.
+- Additionally Packetbeat could be installed as a network monitor. This beat captures network traffic and used for monitoring the servers and applications performance
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
